@@ -22,6 +22,7 @@ jobs:
       - name: Running Test Cases
         run: echo "Testing the App"
   deploy:
+    needs: [build,code,test]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy The App
